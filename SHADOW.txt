@@ -1,0 +1,6 @@
+shadow prebuilt repo: libcap (target)
+  upstream: external/libcap
+  api-level: 32 (branch 32-20261016)
+  blobs: org.blisslabs.ag.libcap.apex org.blisslabs.ag.libcap.dev.apex org.blisslabs.ag.libcap.ng.*
+  dev-src: extracted dev payload + headers + root Android.bp
+  date: 2026-10-16

@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=
+libdir=//apex/org.blisslabs.ag.libcap/lib
+includedir=/usr/include
+
+Name: libcap
+Description: libcap - linux capabilities library
+Version: 2.78
+Libs: -L${libdir} -L${prefix}.dev/lib -lcap
+Libs.private: 
+Cflags: -I${includedir}

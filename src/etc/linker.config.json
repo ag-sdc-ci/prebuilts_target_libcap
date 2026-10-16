@@ -1,0 +1,23 @@
+{
+	"provideLibs": [	
+		    "libcap-x86_64-v2.so",
+		    "libcap-x86_64-v2.so.2",
+		    "libcap.so",
+		    "libcap.so.2",
+		    "libdummy_binary_capsh-x86_64-v2.so",
+		    "libdummy_binary_capsh.so",
+		    "libdummy_binary_getcap-x86_64-v2.so",
+		    "libdummy_binary_getcap.so",
+		    "libdummy_binary_getpcaps-x86_64-v2.so",
+		    "libdummy_binary_getpcaps.so",
+		    "libdummy_binary_setcap-x86_64-v2.so",
+		    "libdummy_binary_setcap.so",
+		    "libdummy_libcap-x86_64-v2.so",
+		    "libdummy_libcap.so"
+	],
+	"requireLibs": [	
+		    "libattr.so",
+		    "libc.so.6"
+	],
+	"visible": true
+}

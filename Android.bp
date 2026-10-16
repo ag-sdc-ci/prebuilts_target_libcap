@@ -1,0 +1,64 @@
+package {
+    default_applicable_licenses: ["external_libcap_license"],
+}
+
+license {
+    name: "external_libcap_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-BSD",
+        "SPDX-license-identifier-GPL-2.0",
+    ],
+    license_text: [
+        "LICENSE",
+    ],
+}
+
+prebuilt_apex {
+    name: "org.blisslabs.ag.libcap",
+    apex_name: "org.blisslabs.ag.libcap",
+    source_apex_name: "org.blisslabs.ag.libcap",
+    arch: {
+        x86_64: {
+            src: "org.blisslabs.ag.libcap.apex",
+        },
+    },
+    filename: "org.blisslabs.ag.libcap.apex",
+    prefer: true,
+    installable: true,
+}
+
+cc_prebuilt_library {
+    name: "libcap",
+    host_supported: true,
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+    export_include_dirs: [
+        "dev-src/include",
+    ],
+    shared: {
+        srcs: ["src/lib/libcap.so"],
+    },
+    static: {
+        srcs: ["dev-src/lib/libcap.a"],
+    },
+}
+
+cc_prebuilt_binary {
+    name: "setcap",
+    host_supported: true,
+    srcs: ["src/bin/setcap"],
+    prefer: true,
+}
+
+cc_prebuilt_binary {
+    name: "getcap",
+    host_supported: true,
+    srcs: ["src/bin/getcap"],
+    prefer: true,
+}

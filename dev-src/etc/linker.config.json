@@ -1,0 +1,16 @@
+{
+	"provideLibs": [	
+		    "libdummy_binary_libcap.a-x86_64-v2.so",
+		    "libdummy_binary_libcap.a.so",
+		    "libdummy_headers_libcap-x86_64-v2.so",
+		    "libdummy_headers_libcap.so",
+		    "libdummy_libcap_dev-x86_64-v2.so",
+		    "libdummy_libcap_dev.so",
+		    "libdummy_pkgconfig_libcap-x86_64-v2.so",
+		    "libdummy_pkgconfig_libcap.so"
+	],
+	"requireLibs": [	
+		    "libattr.so"
+	],
+	"visible": true
+}
