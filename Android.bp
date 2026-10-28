@@ -39,26 +39,26 @@ cc_prebuilt_library {
         "//apex_available:anyapex",
     ],
     export_include_dirs: [
-        "dev-src/include",
+        "include",
     ],
     shared: {
-        srcs: ["src/lib/libcap.so"],
+        srcs: ["lib64/libcap.so"],
     },
     static: {
-        srcs: ["dev-src/lib/libcap.a"],
+        srcs: ["lib64/libcap.a"],
     },
 }
 
 cc_prebuilt_binary {
     name: "setcap",
     host_supported: true,
-    srcs: ["src/bin/setcap"],
+    srcs: ["bin/setcap"],
     prefer: true,
 }
 
 cc_prebuilt_binary {
     name: "getcap",
     host_supported: true,
-    srcs: ["src/bin/getcap"],
+    srcs: ["bin/getcap"],
     prefer: true,
 }
